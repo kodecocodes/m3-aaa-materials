@@ -58,6 +58,7 @@ material = { module = "com.google.android.material:material", version.ref = "mat
 [plugins]
 android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
 [bundles]
 androidx = ["androidx-activity-compose", "androidx-core-ktx", "androidx-lifecycle-runtime-ktx"]

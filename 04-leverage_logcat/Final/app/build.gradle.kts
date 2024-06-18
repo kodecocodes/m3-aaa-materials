@@ -38,6 +38,7 @@ import java.util.Properties
 plugins {
   id("com.android.application")
   id("org.jetbrains.kotlin.android")
+  alias(libs.plugins.compose.compiler)
 }
 
 val keysPropertiesFile: File = rootProject.file("keys.properties")
