@@ -1,6 +1,6 @@
 [versions]
 # Plugin versions
-android-gradle-plugin = "8.2.0"
+android-gradle-plugin = "8.5.0"
 appcompat = "1.6.1"
 coil-compose = "2.4.0"
 core-splashscreen = "1.0.1"
