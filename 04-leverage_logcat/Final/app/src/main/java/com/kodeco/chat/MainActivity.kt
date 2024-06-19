@@ -35,6 +35,7 @@
 package com.kodeco.chat
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
@@ -52,6 +53,8 @@ import live.ditto.DittoLogLevel
 import live.ditto.DittoLogger
 import live.ditto.android.DefaultAndroidDittoDependencies
 import live.ditto.transports.DittoSyncPermissions
+
+private const val TAG = "MainActivity"
 
 class MainActivity : ComponentActivity() {
 
@@ -81,8 +84,14 @@ class MainActivity : ComponentActivity() {
     setupDitto()
   }
 
+  override fun onResume() {
+    super.onResume()
+    Log.i(TAG, "onResume() called.")
+  }
+
   private fun checkPermissions() {
     val missing = DittoSyncPermissions(this).missingPermissions()
+    Log.i(TAG, "Checking permissions for: '${missing.contentToString()}'")
     if (missing.isNotEmpty()) {
       this.requestPermissions(missing, 0)
     }
